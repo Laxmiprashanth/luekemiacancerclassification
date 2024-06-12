@@ -1,0 +1,152 @@
+/* major.css */
+
+.h1 {
+    background-image: linear-gradient(to left, yellow, green);
+    height: 10vh;
+    width: 100vw;
+}
+
+.h11 {
+    color: white;
+    text-align: center;
+}
+
+.dhot {
+    text-align: center;
+    font-family: "Roboto";
+}
+
+.upload {
+    text-align: center;
+}
+
+.doh {
+    margin-top: 10vh;
+    background-color: #0000ff;
+    color: white;
+}
+
+.op {
+    color: #401aa8;
+}
+
+.d {
+    color: red;
+}
+
+.searchpo {
+    text-align: center;
+}
+
+.back {
+    height: 20vh;
+    width: 20vw;
+    background-size: cover;
+}
+
+.btn {
+    margin-top: 10vh;
+    width: 25vh;
+    border-radius: 20px;
+}
+
+.results {
+    background-image: linear-gradient(to left, violet, #78ffd6, green);
+    margin-top: 10vh;
+}
+
+
+.d {
+    margin-top: 20vh
+}
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+.container {
+    width: 100vw;
+    margin: auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Different background colors for different fields */
+#wbcCount {
+    background-color: #f5f5f5; /* Light gray */
+}
+
+#rbcCount {
+    background-color: #f0f8ff; /* Light blue */
+}
+
+#cellMorphology {
+    background-color: #f0e68c; /* Khaki */
+}
+
+#cellCount {
+    background-color: #ffe4e1; /* Misty rose */
+}
+
+#nuclearMorphology {
+    background-color: #98fb98; /* Pale green */
+}
+
+#chromosomalAbnormalities {
+    background-color: #d3d3d3; /* Light gray */
+}
+
+#textureFeatures {
+    background-color: #e0ffff; /* Light cyan */
+}
+
+#colorFeatures {
+    background-color: #ffc0cb; /* Pink */
+}
+
+#contextualFeatures {
+    background-color: #dda0dd; /* Plum */
+}
+
+.center {
+    text-align: center;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="1.css">
+    <script src="1.js"></script>
+    <style>
+        /* Your custom CSS styles here */
+    </style>
+</head>
+
+<body>
+    <div id="section1">
+        <div class="section1" id="ior">
+            <div class="h1">
+                <h1 class="h11">Leukemia Cancer Classification</h1>
+            </div>
+            <center>
+                <img class="back" src="https://i0.wp.com/ketto.blog/wp-content/uploads/2020/01/leukemia.jpg?resize=320%2C240&ssl=1">
+            </center>
+            <h1 class="dhot">Hi, upload blood images to know accuracy</h1>
+            <div class="op d-flex flex-column justify-content-center">
+                <center>
+                    <input type="file" id="file" onchange="validateFileName()" accept="image/png, image/jpeg" />
+
+                </center>
+            </div>
+            <center>
+                <button class="btn btn-primary" onclick="switchToPage2()">Next</button>
+                <p id="para1"></p>
+            </center>
+        </div>
+    </div>
+
+
+    <div id="section2" style="display: none;">
+        <h1 id="name"></h1>
+        <div class="container">
+            <h2>Enter Leukemia Attributes</h2>
+            <div class="form-group">
+                <label for="wbcCount">White Blood Cell (WBC) Count:</label>
+                <input type="number" class="form-control" id="wbcCount" placeholder="Enter WBC count">
+            </div>
+            <div class="form-group">
+                <label for="rbcCount">Red Blood Cell (RBC) Count:</label>
+                <input type="number" class="form-control" id="rbcCount" placeholder="Enter RBC count">
+            </div>
+            <div class="form-group">
+                <label for="cellMorphology">Cell Morphology:</label>
+                <input type="text" class="form-control" id="cellMorphology" placeholder="Enter cell morphology value either">
+            </div>
+            <div class="form-group">
+                <label for="cellCount">Cell Count:</label>
+                <input type="text" class="form-control" id="cellCount" placeholder="Enter cell count">
+            </div>
+            <div class="form-group">
+                <label for="nuclearMorphology">Nuclear Morphology:</label>
+                <input type="text" class="form-control" id="nuclearMorphology" placeholder="Enter nuclear morphology">
+            </div>
+            <div class="form-group">
+                <label for="chromosomalAbnormalities">Chromosomal Abnormalities:</label>
+                <input type="text" class="form-control" id="chromosomalAbnormalities" placeholder="Enter chromosomal abnormalities">
+            </div>
+            <div class="form-group">
+                <label for="textureFeatures">Texture Features:</label>
+                <input type="text" class="form-control" id="textureFeatures" placeholder="Enter texture features">
+            </div>
+            <div class="form-group">
+                <label for="colorFeatures">Color Features:</label>
+                <input type="text" class="form-control" id="colorFeatures" placeholder="Enter color features">
+            </div>
+            <div class="form-group">
+                <label for="contextualFeatures">Contextual Features:</label>
+                <input type="text" class="form-control" id="contextualFeatures" placeholder="Enter contextual features">
+            </div>
+            <center>
+                <button class="btn btn-primary" onclick="switchToPage3()">Next</button>
+            </center>
+        </div>
+    </div>
+    
+
+    <div id="section3" style="display: none;">
+        <div class="container">
+            <h2>Leukemia Diagnosis</h2>
+            <div class="image-container">
+                <img id="uploadedImage" class="back" src="" alt="Uploaded Image">
+            </div>
+            <div>
+                <h4>Leukemia Attributes:</h4>
+                <p>White Blood Cell (WBC) Count: <span id="displayWBCCount"></span></p>
+                <p>Red Blood Cell (RBC) Count: <span id="displayRBCCount"></span></p>
+                <!-- Display additional attributes -->
+                <p>Cell Morphology: <span id="displayCellMorphology"></span></p>
+                <p>Cell Count: <span id="displayCellCount"></span></p>
+                <p>Nuclear Morphology: <span id="displayNuclearMorphology"></span></p>
+                <p>Chromosomal Abnormalities: <span id="displayChromosomalAbnormalities"></span></p>
+                <p>Texture Features: <span id="displayTextureFeatures"></span></p>
+                <p>Color Features: <span id="displayColorFeatures"></span></p>
+                <p>Contextual Features: <span id="displayContextualFeatures"></span></p>
+            </div>
+          
+            <center>
+                <div class="searchpo d-flex flex-column justify-content-center" id="search">
+                    <div class="back12">
+                        <div class="d">
+                            <p id="para"></p>
+                            <h1 id="l1" class="op"></h1>
+                            <h1 id="l2" class="op"></h1>
+                            <h1 id="l3" class="op"></h1>
+                            <h1 id="l4" class="op"></h1>
+                            <h1 id="l5" class="op"></h1>
+                            <h1 id="l6" class="op"></h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Diagnosis:</h4>
+                    <p id="diagnosisResult"></p>
+                </div>
+                <button class="btn btn-primary" onclick="function12()">Back</button>
+            </center>
+        </div>
+    </div>
+    
+  
+  
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
